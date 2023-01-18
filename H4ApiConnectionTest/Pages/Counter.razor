@@ -20,8 +20,8 @@
     }
 
     // The content of the mail
-    HttpContent httpContent = new StringContent("<h1>body<h1>");
-    //string httpContent = "<h1>body<h1>";
+    //HttpContent httpContent = new StringContent("<h1>body<h1>");
+    string httpContent = "<h1>body<h1>";
     //192.168.43.126
     //0.0.0.0
     //localhost
@@ -37,7 +37,7 @@
         // Don't like HTTP // This request has been blocked; the content must be served over HTTPS.
         //await httpClient.PostAsync(@"http://10.108.162.69:5030/Email/sendemail", httpContent);
         //await httpClient.PostAsJsonAsync(@"http://10.108.162.69:5030/Email/sendemail", httpContent);
-        //await httpClient.PostAsJsonAsync(@"http://10.108.162.69:5034/Email/sendemail", httpContent);
-        await httpClient.PostAsync(@"https://10.108.162.69:7141/Email/sendemail", httpContent);
+        await httpClient.PostAsJsonAsync(@"https://192.168.43.106:7141/Email/sendemail", httpContent);
+        //await httpClient.PostAsync(@"https://10.108.162.69:7141/Email/sendemail", httpContent);
     }
 }
